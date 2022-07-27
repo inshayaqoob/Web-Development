@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <!-- <ul>
+        <ul id="element" data="Valid">
+            <li class="INSHSA">First Name</li>
+            <li class="INSHSA">Second Name</li>
+            <li class="INSHSA">Third Name</li>
+
+
+        </ul>
+            <table>
+                <tr>
+                    <td class="INSHSA">First</td>
+                    <td class="INSHSA">Second</td>
+                    <td class="INSHSA">Third</td>
+            
+                </tr>
+                <tr>
+                    <td >One</td>
+                    <td>Two</td>
+                    <td>Three</td>
+            
+                </tr>
+                <tr>
+                    <td>Four</td>
+                    <td>Five</td>
+                    <td>six</td>
+            
+                </tr>
+            </table> -->
+            <button id="clickBtn" onclick="alert('Valid')">
+                Click me
+            </button>
+            <script>
+        
+            
+                // documnet object attach hota ha window object k sath global window object k sath attach hota ha 
+// in html every element is called element node 
+// to access root element we write documentelement
+// TO acces root elemnet
+// console.log(document.documentElement);
+// console.log(document.body);
+// console.log(document.head);
+// to acces childre parent name k sath .lga kr childnode likh daina ha jo k aik proerty ha 
+// console.log(document.body.childNodes);
+// DOM ma agr hm koi gap dy gy like body or ul ma a rha ha to wo osko text hi khy ga like output ma first pa text  a rha ha jb k hm na to likha nhi ha     
+// agr hm child node ki jgha children likh dy to hmy text wghera nhi show ho ga 
+// console.log(document.children);
+// we can also do this by using for of loop
+// for(nodes of document.body.children){
+    // console.log(nodes);
+// }
+// to acces first child if we write firstchild then text b show ho ga but specfic element ko lainy k liy withoout text we write firstelemntchild and vice versa for last child
+// console.log(document.body.firstElementChild);
+// console.log(document.body.lastElementChild);
+// to convert into array we write array.from the braces ma wo jin ko krna ha hm na 
+// array.from(document.body.children)   
+// const Variable = Array.from(document.body.children)
+// console.log(Variable);  
+// Siblings
+// const UlTag = document.body.children[0]
+// const FirstLi = UlTag.children[0];
+// const SecondLi = UlTag.children[1];
+
+// console.log(SecondLi.previousElementSibling);
+// console.log(SecondLi.nextElementSibling.textContent);
+// Table Dom Manipulation
+// console.log(document.body.children[1]);
+// const TblTag = document.body.children[1];
+// console.log(TblTag);
+// const FirstRow = TblTag.children[0]
+// const Second = FirstRow.children[1];
+// console.log(FirstRow);
+// const Sibling = Second.firstElementChild;
+// const Sibling = Second.nextElementSibling.textContent;
+// console.log(Sibling);
+// const TblTag = document.body.children[1]
+// console.log(TblTag.tBodies[0].rows[0].cells[1].textContent);
+// console.log(TblTag.tBodies[0].rows[1].cells[2].textContent);
+// console.log(TblTag.rows);
+//hm textContent ko remove kr k style tag lga kr styling b kr skty ha
+//console.log(TblTag.tBodies[0].rows[1].cells[2].style="background-color:blue;");
+// By Id Search to get id we use getElementbyID
+// const TblTag= document.getElementById("element")
+// console.log(TblTag.style="background-color:Green;");
+//if we remove salsh between backgroundColor the we use camel case like below line
+// console.log(TblTag.style.backgroundColor='red');
+//By searc class name
+// const Class = document.getElementsByClassName("INSHSA");
+// console.log(Class.style.backgroundColor='Yellow');
+// By using query selector
+//remeber to use querySelector we alwasy also write dot with class name
+// const Insha = document.querySelector('.INSHSA');
+// console.log(Insha);
+// jb hm querySelectorall likhyy gy to phr multiple cheezy selectb ho gi
+// const Insha = document.querySelectorAll('.INSHSA');
+//same jaisy id likhni ha to # lgiy gy
+// console.log(Insha);
+// const Insha = document.querySelectorAll('ul>li:last-child');
+// console.log(Insha[0].textContent);
+// main difference between querySelectorAll and getElement waly jo hoty ha yeh ha  k querySelectorAll are statics mean change na hona while getElement are dynamic
+// To acces attributes
+// which attributes are made by self can not access easily there are some properties to access these attributes while predefined attributes can be acces easily
+// const Students = document.getElementById('Arfa')
+// console.log(element.getAttribute('data')); 
+// console.log(element.setAttribute('order-placed', 'Datat'));
+// console.log(element.getAttribute('order-placed'));
+// hasattribute also used which check attribute exixt krta ha ya nhi
+// console.log(element.hasAttribute('order-placed'));
+// console.log(element.removeAttribute('order-placed')); 
+//remove krny k bd check kry gy to wo false dy ga
+// console.log(element.hasAttribute('order-placed'));
+// console.log(element.id);
+// ab jo hm na khud bniya ha os k liy getattribute wali property lgiy gy
+// Creating and removing element
+// const newDiv = document.createElement('div')
+// const newText = document.createTextNode('Hello')
+// newDiv.appendChild(newText)
+//agr hm na html ka inner code dalna ho to then hm 
+// newDiv.innerHTML=` <ul id="element" data="Valid">
+//             <li class="INSHSA">First Name</li>
+//             <li class="INSHSA">Second Name</li>
+//             <li class="INSHSA">Third Name</li>
+//             </ul>`
+// yeh jo lgiya ha comma sa yeh ecs k nechy hota ha laptop ma or yeh isliy lgaty ha jb zaida lines ho
+// body.append(newDiv)
+// by using prepend text pehly show ho jiy ga
+//agr body sa opper likhna ho to before lga dy gy
+//body.before(newDiv)
+//body.after(newDiv)
+// same aisy hm remove b kr skty Ha
+//FirstDiv.remove()
+//FirstDiv.replacewith(newDiv);
+//Events
+function callMe (){
+    alert('Thanks Bushra');
+}
+
+// clickBtn.onclick = callMe is ma functin pass krwiya ha 
+// clickBtn.onclick = callMe() is ma call krwiya ha
+
+// agr hm function ko call krwa dy to auto alert a jata begari click kiy but agr pass krwiy gy to phr click krny sa aiy ga
+// events ko add krny ka best method ha addEventListener ko use krna is k parament ma pehly hm event jo krwana ha then function ka name jis ko krwana ha 
+clickBtn.addEventListener('click', callMe)
+// agr hm na inlick koi event krwiya ho ga to wo show nhi hota pehly wo hota jo hm addEventListener sa or function lga kr krty ha
+</script>
+</body>
+</html>

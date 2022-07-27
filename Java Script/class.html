@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <h1>Class</h1>
+    <!-- for class we use pascal case -->
+    <!-- For declare a class -->
+    <script>
+    //     class Pencil{
+    //         constructor(itemName,price,itemcode){
+    //         this.itemname='itemname',
+    //         this.price=12,
+    //         this.itemcode=123
+    //     }
+    // }
+    // let BallPoint = new Pencil('dress', 34,123);
+    // console.log(BallPoint);
+        // Expression of class
+        const Product_1= class Pencil{
+            constructor(itemName,price,itemcode){
+            this.itemname='itemname',
+            this.price=12,
+            this.itemcode=123
+        }
+
+        }
+        let Chair = new Product_1('dress', 34,123);
+        // agr hm output ma Product_1.name likhy gy to class ka name pencil show kry ga agr hm class k bd jo pencil likha ha wo remove kr dy gy to then check kry gy to class ka name Product_1 ho ga q k ab hm na class ka name khtm kr diya ha
+        
+        const Product_2= class {
+            constructor(itemName,price,itemcode){
+            this.itemname='itemname',
+            this.price=12,
+            this.itemcode=123
+        }
+
+        }
+        let Chairr = new Product_2('dress', 34,123);
+        console.log(Product_2.name);
+        // Getter and Setter method
+        class Pencil{
+            constructor(itemName,price,itemcode){
+            this.itemname='itemname',
+            this.price=12,
+            this.itemcode=123;
+            
+        }
+        get GetPriceValue(){
+            return this.price;
+        }
+        // output check by BallPoint.GetPriceValue
+        set SetPriceValue(value){
+            this.price=value;
+        }
+        // for output to set value likhna ha BallPoint.SetPriceValue=10; value dy dani
+    }
+    let BallPoint = new Pencil('dress', 34,123);
+    console.log(BallPoint);
+    // To write methods like we use discount method to count value
+    class Pencil_1{
+            constructor(itemName,price,itemcode){
+            this.itemname='itemname',
+            this.price=12,
+            this.itemcode=123
+        }
+        disacountvalue(){
+            return this.price*this.itemcode;
+        }
+    }
+    let BallPoint_1 = new Pencil_1('dress', 34,123);
+    console.log(BallPoint_1);
+    // How to extend a class
+    class Lahore {
+            constructor(Name){
+                this.Name=Name;
+            }
+            getName(){
+                return this.Name +'is a furniture ';
+            }
+        }
+        class furniture extends  Lahore{
+            constructor(Name){
+            super(Name)}
+            // super function apny parents ka Construtor lata ha
+            getValue(){
+                return this.Name + 'insha';
+            }
+        }
+        let Karachi = new Lahore('welcome');
+        let Kursi = new furniture('Flower');
+        console.log(Karachi);
+    </script>
+</body>
+</html>

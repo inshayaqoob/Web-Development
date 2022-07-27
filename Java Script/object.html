@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>Objects</h1>
+    <script>
+        // let girl=prompt('what is the name');
+
+        // let animal={
+        //     name:'camel',legs:6
+
+        // }
+        // console.log(animal);
+        // Dott notation used to acces properties
+        // console.log(animal.name);
+        // Bracket notation
+        // console.log(animal["name"]);
+        // let lespro="legs"
+        // console.log(animal[lespro]);
+        // const books ={
+        //     name:'physics',courseCode:306,
+        //     notes:{
+        //         title:"ABC"  
+        //           },
+        //           enroll(){
+        //               console.log("Welcome to apna college");
+        //           }
+        // }
+        // console.log(books.enroll());
+        // console.log(books.name);
+        // factory function
+        // function createcourse(title){
+        //     return{
+
+        //         title:'insha',
+        //           enroll(){
+        //               console.log("Welcome to apna college");
+        //           }
+        //         }
+        // }
+
+
+        // const course = createcourse('java');
+        // console.log(course);
+        // // Constructor function
+        // // construtor ma always pascal case ka use krty ha or is ma this or new ka keyword use krty ha
+        // function Variables(){
+        //     this.title='insha',
+        //     this.pakistan="phy",
+        //     this.enroll=function(){
+        //         console.log('u are the great')
+        //     },
+        //     course.checkbox=function(){
+        //         console.log("insha")
+        // yeh jb hm na new function bnanan ho ga to jis variable sa os ko equal rakha ho ga os sa krwa skty ha
+
+        // }
+        // const cousre = new Variables('java');
+        // // course.enroll();
+        // // delete course.title;
+        // // console.log(course);
+        // // course.title;
+        // course.checkbox();
+        // }
+        // console.log(course.constructor);
+        // Reference datatype
+        // let num=10;
+        // let ibj=num;
+        // num=12;
+        // console.log(num,ibj);
+        // let obj_1={
+        //     Number:12}
+        //      let obj_2=obj_1
+        //      obj_1.Number=15;
+        // console.log(obj_1,obj_2);
+        // const data={
+        //     title:'java',
+        //     age:12,
+        //     enroll(){
+        //     console.log(' u are the great');
+        //     }
+
+        //     }
+        // const course_1 = {...data};
+        // const course_4 = Object.assign({},data);
+        // course_4.title='cs';
+        // Exersice for Object
+        // const product = {
+        //     itemName:'shoes',
+        //     price:2000,
+        //   discount:20,
+        //   itemscode:2345
+        // let course_7=product;
+        // console.log(product);
+        // }
+        // const conse_9 ={...product};
+        // console.log(conse_9);
+        // product.itemscode();
+        // constructor function
+        // this code used to get calculation
+        function product(shoes,price,Disacount,fg) {
+            this.ItemName = 'shoes',
+                this.Price = 'price',
+                this.Discount = 'Disacount',
+                this.ItemCode = 'fg',
+        this.DisacountValue= function(){
+            return price*Disacount/100;
+        }
+        }
+        const great = new product('java',30000,5,'ts');
+        console.log( great);
+        // function Pakistan(girl) {
+        //     return {
+        //         girl: 'insha',
+        //         good() {
+        //             console.log('ayesha');
+        //         }
+        //     }
+        // }
+        // const welcome = Pakistan('cs');
+        // console.log(welcome);
+        // delete welcome.girl;
+        // console.log(welcome);
+        
+        // Exercise for objects
+        let square={
+            side:13,
+            get GetValue(){
+                return this.side*this.side;
+            }
+        }
+        // let courses=square ;  
+        //    console.log(courses);
+        // square.GetValue=13
+        console.log(square.GetValue);
+        let students = ['I','N','s','H','A']
+        console.log(students.join('_'));
+    </script>
+</body>
+
+</html>

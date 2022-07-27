@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>     Scopes</title>
+</head>
+<body>
+    <h1>Scopes</h1>
+    <script>
+        // Global scope ma hm var keyword use kry gy
+        // there are three types of scope in java Script
+        // 1 Global scope
+        // 2 Local scope/Functional scope
+        // 3 Block Scope
+        // Global Scope
+        // if we write the code in curly brackets or in any function then it will be in local and block scope  jb k baqi jis ma likhy gy wo ho ga global sccope
+        // when we write code in curly brackets it also called block scope
+        // koi b variable agr hm local scope ya block scope sa bahir bniy gy to wo hota ha global scope
+        
+    var name ='INSHA'
+    function students(){
+        console.log(name);
+
+    }
+    students();
+    // agr hm log wohi variable ka name use kry gy jo hm na global k andr bniya tha or osko function ma ya blocks ma likhy gy to wo exectue ho jiy ga or agr hm os k andr aik or new variable bna dy gy function ma to wo error dy ga 
+// browser eniviorment pa always window object ko use krty ha hm
+// var name ='INSHA'
+//     function students(){
+//         var pencil='Ballpoint'
+//         console.log(name);
+
+//     }
+//     students();
+//     console.log(pencil);
+    // local scope
+    function Pakisatn(){
+        var x=1;
+        console.log(x);
+        {
+            function Lahore(){
+                var x = 3;
+                console.log(x);
+            }
+        }
+        Lahore();
+    }
+    Pakisatn();
+    // block scope ma var use krna itna valid nhi hota like agr hm koi block scope likhty ha os ma var use krty ha then os sa bahir aik variable bnaty ha var sa or console krwaty ha to block k andr jo likha ha osi waly ki output dy ga q k hm na var use kiya ha agr hm let use kry gy then jo hm na bahir likha ha oski output sai dy da ga
+    // Block Scope
+    {
+        var x =12;
+        console.log(x);
+    }
+    // same agr hm var lga kr bahir likhty ha to wo andr wali hi dy ga
+    // var y=12;
+    // {
+    //     var x =12;
+    //     console.log(x);
+    // }
+    // console.log(y);
+    // but agr hm let use kry gy to wo dy ga
+    let y=13;
+    {
+        let x =12;
+        console.log(x);
+    }
+    console.log(y);
+    // for loop ma always let use krna chahiy var sa error ata ha
+    // let or const achy sa km krta ha block scope ma
+
+    </script>
+</body>
+</html>

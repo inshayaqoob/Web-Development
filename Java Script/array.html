@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <!-- All these methods are primitive -->
+    <!-- includes use in only primitive data types not use in reference data type -->
+    <!-- reference data types are array and object while primitive data types are null boolen string -->
+    <script>
+        // let books = ["English","Physic","Chemistry"]
+        // console.log(books);
+        // console.log(books.length)
+        // console.log(books[0]);
+        // console.log(books.indexOf('English'));
+        // console.log(books.slice(2,3));
+        // console.log(books.toUpperCase);
+        // let Chairs =[1,2,3,4,5,6,7,,8,9]
+        // to get last element we use lenght-1 wala function
+        // console.log(Chairs[Chairs.length-1]);
+        // console.log(Chairs.length);
+        // console.log(Chairs);
+        // Array Declare second method
+        let Chairs = new Array (1,2,3,4);
+        console.log(Chairs);
+        // Push
+        // console.log(Chairs.push(10));
+        // Unshift is  sa jo element b add kry gy wo start ma  ajiy ga 
+        console.log(Chairs.unshift(0));
+        // pop method ma hm kuch pass nhi krwaty ha wo last waly element ko khud hi remove kr data ha 
+// console.log(Chairs.pop());
+// shift pop ki trha pop last sa remove kr data ha khud hi or shift start sa remove kr dy ga khud hi 
+// console.log(Chairs.shift());
+// kisi b index ko koi value assign krny k liy we use 
+// Chairs[1]='insha'
+//  const names =['insha','arfa','ayesha','iram']
+// console.log(names.lastIndexOf('arfa'));
+// include method is hm log dekhy skty ha jo value hm likh kr dekhy gy k exixt krti ha ya nhi 
+// console.log(names.includes('arfa'));
+// or agr value k sath comma b lga dy to then wo osi index sa start kry ga
+// console.log(names.includes('arfa',3));
+// let Haroonabad=[{
+//     name:'insha',
+//     city:'Haroonabd'
+// },
+// {
+//     Gender:'Girl',
+//     uni:'Agriculture'
+// },
+// {
+// Country:'Pakisatn',
+// Live:'Faislabad'
+
+// }];
+// console.log(Haroonabad.includes({
+//     name:'insha',
+//     city:'Haroonabd'
+// }));
+// inline function
+// console.log(Haroonabad.find(function(element){
+//     return element.Live ==='Karachi'
+// }))
+// arrow function
+// console.log(Haroonabad.find((element)=>{
+//     return element.Live='Haroonabad'
+// }))
+// console.log(Haroonabad.find((element) => {
+//     return element.Live === 'Faislabad'
+// }))
+// for only one element we remove return and bracket braces
+// console.log(Haroonabad.find(element => element.Live='Haroonabad'))
+// concat method used to join 2 arrays and or to add new value in array
+// let name1 = ['insha','Arfa','Ayesha','Asad']
+// let name2 = ['iram','aymen','amna']
+// console.log(name1.concat('Pakistan'));
+// console.log(name1.concat(name2));
+// to use slice  index dainy sa os index sa back wali values sari remove ho jiy gi
+// pehla index likhny sa wo apny pehly waly ko khtm kry ga or agr comma lgany k bd index likhy gy to wo khud ki or next waly ki remove kr dy ga
+// let name3 = name1.concat(name2)
+// spread method use to get value by using dots like
+// let name3=[...name1,...name2];
+// console.log(name3);
+// console.log(name3.slice(2,4));
+let names = ['INSHA','ARFA','AYESHA','IRAM','AYMEN']
+// for(let i=0; i<names.length; i++){
+
+
+// console.log(names[i]);}
+// console.log(names[i]);
+// }
+// For of loop
+// for for loop ma pehly let kr k variable ka name then array ka name jo use hui ha
+// for(let name of names){
+    // console.log(name);
+    // here name is object and names are name of array
+    // console.log(names);
+    // console.log(name[names]);
+// }
+// For each loop
+// is ma sb sa pehly array ka name then. lga k for each or  then os ma function likhna ha
+// names.forEach(function(name,index){
+    // console.log(name);
+    // console.log(name,index);
+// })
+// Join method
+// join method use to combine array elements same likh dy ga agr simple call kry gy to agr hm empty string choor dy gy to wo then sb ko mila ka aik word bna dy ga 
+// let students=['i','n','s','h','a']
+// console.log(students.join());
+// console.log(students.join('_'));
+// aisy empty string likhny sa os na pura name bna diya ha 
+// Split method
+// students=students.join('_');
+// console.log(students.split('_'));
+// join ma agr hm underscore lgaty ha to wo sath hi likha jata ha word k while split method totally separtae kr data ha
+// Filter method used to find elements in whole array
+// let name =[{
+    // names:'Lahore',Populataion:23456},
+    // {names:'Karachi',Populataion:78900},
+    // {names:'Islamabad',Populataion:098765}
+
+// ];
+// console.log(name.filter(city => {
+    // return city.Populataion>20000;
+    // here city is name of object jo k hmmy khud declare krna hota
+// }))
+// Map method 
+// isko use krty ha jo b hm operate krwiy gy oska jo ans ho ga wo output ma new array ma dy da ga
+// console.log(name.map(city=> city.Populataion*2
+// ))
+// Exercise Of Array
+let students=[{
+    name:'INSHA',city:'Haroonabad',Height:3.2
+},
+{
+    name:'ArFA',city:'Haroonabad',Height:3.2
+},
+{
+    name:'AYMEN',city:'Haroonabad',Height:3.2
+},
+{
+    name:'ASAD',city:'Haroonabad',Height:3.6
+},
+{
+    name:'IRAM',city:'Haroonabad',Height:3.2
+}
+]
+// console.log(students.map(citty=> citty.city+2 ))
+// console.log(students.map(good=>{
+//     return good.Height;
+// }))
+// console.log(students.reduce((prevHeight,students)=>{
+//     return prevHeight + Number(students.Height);
+// },0));
+console.log(students.find(element=> element.Height>3.2));
+console.log(students.filter(obj=>{
+    return obj.Height=3.2;
+})
+)
+// Sort method
+console.log(students.sort((students1,students2)=>{
+    if(students1.name>students2.name){
+        return -1;
+
+    }
+    if(students1.name<students2.name){
+        return 1;
+        
+    }
+    return 0;
+    
+}))
+console.log(students.every((students)=>{
+    return students.Height>3.6;
+}))
+console.log(students.every((students)=>{
+    return students.Height;
+}))
+// some b aik ko check kry ga or true false ma ans dy ga k yeh ha ya nai
+
+
+
+
+    </script>
+
+</body>
+</html>

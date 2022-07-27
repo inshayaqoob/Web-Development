@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+    <form><h1 class="main_heading">Payment Form</h1>
+        <h2>Contact Information</h2>
+        <p> Name:* <input type="text"name="name" required></p>
+        <fieldset>
+            <legend>Gender</legend>
+        <label id="21">
+            <input type="radio" value="male" name="gender">male
+        </label>
+        <label id="23">
+            <input type="radio" value="female" name="gender">Female
+        </label>
+        </fieldset>
+        <p>Address: <textarea name="address" value="va">
+        </textarea></p>
+        <p>Email:* <input type="Email" required></p>
+        <p>Pincode:* <input type="number" required></p>
+        <h2>    Payment Information</h2>
+        <p>Card type:*
+            <select name="card_type" id="card_type" required>
+                <option value="">---select a card_type</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">rupay</option>
+                <option value="master card"></option>
+            </select>
+        </p>
+        <p>card number:* <input type="number" name="card number" id="card number" required></p>
+        <p>Inspiration date:* <input type="date" name="exp_date" id="exp_date" required></p>
+    <p>CW <input type="password" name="cw" id="cw"></p>
+    <input type="submit" value="Pay Now">
+    </form>
+    </div>
+</body>
+</html>
